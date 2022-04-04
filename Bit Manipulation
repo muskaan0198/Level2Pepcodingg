@@ -23,3 +23,22 @@ public class MyClass {
       
     }
 }
+-------------------------------------------------------------------------------------------------------------
+import java.util.*;
+public class MyClass {
+    
+    public static void multiply(int num, int pow){
+        System.out.println((num<<pow));
+    }
+    
+    public static void divide(int num, int pow){
+        System.out.println(num>>pow);
+    }
+    public static void main(String args[]) {
+        int x = 3;
+        int pow = 2;
+        multiply(x, pow);
+        divide(x, pow);
+      
+    }
+}
