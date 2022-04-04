@@ -1,0 +1,25 @@
+import java.util.*;
+public class MyClass {
+    
+    public static void set_true(int x, int idx){
+        int temp = (x>>idx); //or with 1's complement
+        temp = (temp | 1);
+        temp = (temp<<idx);
+        x = (x | temp);
+        System.out.println(x);
+    }
+    public static void set_false(int x, int idx){ //and with 1's complement
+        int temp = (x>>idx);
+        temp = (temp & 1);
+        temp = (temp<<idx);
+        x = (x ^ temp);
+        System.out.println(x);
+    }
+    public static void main(String args[]) {
+        int x = 76;
+        int idx = 2;
+        set_true(x, idx);
+        set_false(x, idx);
+      
+    }
+}
